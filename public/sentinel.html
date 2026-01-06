@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SENTINEL GATE | Vetting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 style="color: var(--crimson);">SENTINEL GATE</h1>
+        <p>Identity Verification Required</p>
+    </header>
+
+    <div class="container" style="max-width: 600px;">
+        <div style="background: #111; padding: 20px; border: 1px solid var(--crimson);">
+            <h3 style="color: var(--gold);">WARNING</h3>
+            <p style="font-size: 0.9rem;">Falsifying identity or submitting state-sponsored data will result in a permanent ban from the Hive.</p>
+            
+            <form id="vettingForm" onsubmit="event.preventDefault(); alert('Submission Logged. Pending Review.');">
+                <p>LEGAL NAME:</p>
+                <input type="text" style="width: 100%; padding: 10px; background: #222; border: 1px solid #444; color: white;">
+                
+                <p>REGION (Node):</p>
+                <input type="text" style="width: 100%; padding: 10px; background: #222; border: 1px solid #444; color: white;">
+                
+                <p>CULTURAL QUIZ: Who documented the Black International?</p>
+                <input type="text" placeholder="Answer..." style="width: 100%; padding: 10px; background: #222; border: 1px solid #444; color: white;">
+
+                <br><br>
+                <button class="btn-main" style="width: 100%;">SUBMIT FOR CLEARANCE</button>
+            </form>
+        </div>
+        <br>
+        <center><a href="index.html" style="color: #666;">Return to Command</a></center>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* style.css - THE SOVEREIGN THEME */
+:root {
+    --obsidian: #050505;
+    --crimson: #800020;
+    --gold: #D4AF37;
+    --green: #013220;
+}
+
+body {
+    background-color: var(--obsidian);
+    color: #e0e0e0;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* LIVE WIRE TICKER */
+.live-wire {
+    background: var(--crimson);
+    color: white;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-bottom: 2px solid var(--gold);
+    font-weight: bold;
+}
+.ticker-text {
+    display: inline-block;
+    animation: scroll 20s linear infinite;
+}
+@keyframes scroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+
+/* HEADER & LOGO */
+header {
+    padding: 40px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+.bumble-bee { width: 100px; height: 100px; fill: none; stroke: var(--gold); stroke-width: 2; }
+.bumble-bee-fill { fill: var(--gold); }
+h1 { color: var(--gold); letter-spacing: 5px; margin-bottom: 5px; }
+.tagline { color: #888; font-size: 0.9rem; text-transform: uppercase; }
+
+/* BUTTONS */
+.btn-main {
+    background: var(--crimson);
+    color: white;
+    padding: 15px 30px;
+    border: 1px solid var(--gold);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    margin: 10px;
+    transition: all 0.3s;
+}
+.btn-main:hover { background: #500010; transform: scale(1.05); }
+
+/* SECTIONS & ARCHIVES */
+.container { padding: 40px; max-width: 1000px; margin: 0 auto; }
+.section-title { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 10px; }
+
+.logistics-map {
+    width: 100%; height: 300px; background: #111;
+    border: 1px solid var(--green);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; color: #444;
+}
+
+.archive-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.archive-item { border: 1px solid #333; padding: 10px; background: #0a0a0a; }
+.archive-box { 
+    height: 150px; background: #222; display: flex; 
+    align-items: center; justify-content: center; 
+    color: #555; font-weight: bold;
+}
+.archive-caption { padding: 10px; font-size: 0.8rem; color: #888; }
+
+/* CLOAK */
+#cloak-screen {
+    display: none;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: white; color: black; z-index: 9999;
+    align-items: center; justify-content: center;
+    flex-direction: column;
+}
